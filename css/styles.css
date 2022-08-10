@@ -1,16 +1,48 @@
+/* на боді краще не ставити font-weight: 500; , краще прописувати цю властивість
+ тільки там, де вона необхідна бачу написання властивості font-style: normal; 
+ це зайвий стиль,бо по замовчуванню шрифт має font-style: normal; 
+ прердивись у всьому файлі і прибери де є, крім тегу address - тут ця властивість
+  потрібна
+background-color: #2F303A; - цей фон треба ставити на всю сеекцію, а не тільки 
+заголовок у мекеті в прихованих слоях є задизайнений ховер та фокус ефект 
+для кнопки “Заказать услугу”. При ховері/фокусі фон має змінитись на  
+background: #188CE8; 
+https://prnt.sc/bUPtO_BfMM28 
+бачу написання властивості font-weight: 400; це зайвий стиль,бо по замовчуванню 
+шрифт має font-weight: 400; прердивись по всьому файлові
+.team-title, .occupation-title, .features  -- ці назви заголовків можна замінити 
+на прото .title і додавати цей клас до всіх заголовків секцій
+background-color: #2F303A;  треба ставити на сам футер
+на сторінці портфоліо має залишитись лише одна секція ,  і в цій секції першим має стати заголовок 
+<h1>Проекти</h1> , потім список з фільтром, потім список з портфоліо 
+заголовки Фільтр та Приклади робіт - зайві
+<h3 class="project-title">Технокряк</h3> - та інщі назви - це буде теги <h2>
+до кнопок .filter-btn  треба прописати все що пов'язано з шрифтами. розмір, жирність і так далі
+зверни увагу, бажано, щоб всі кольори були записані у css-змінних. 
+Тобі буде на багато зручніше працювати зі змінними  */
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 :root {
   --secondary-background-color: #F5F5F5;
   --title-color: #212121;
   --text-color: #757575;
   --accent-color: #2196F3;
+  --accent-hover-color: #188CE8;
   --text-light-color: #fff;
+  --button-color: #F5F4FA;
+  --darkest-color: #000000;
+  --dark-background-color:  #2F303A;;
 }
 body {
   font-family: 'Roboto', 'sans-serif';
-  font-style: normal;
   font-weight: 500;
   letter-spacing: 0.03em;
-  background-color: #fff;
+  background-color: var(--text-light-color);
   color: var(--text-color)
 }
 li {
@@ -23,7 +55,6 @@ li {
 .logo-header, 
 .logo-footer {
   font-family: 'Raleway';
-  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -33,15 +64,16 @@ li {
   color: var(--accent-color);
 }
 .logo-header {
-  color: #000;
+  color: var(--darkest-color);
 }
 .logo-footer {
-  background-color: #2F303A;
+  background-color: var(--dark-background-color);
   color: var(--text-light-color);
 }
 /* Navigation */
 
 .nav {
+  font-weight: 500;
   text-decoration: none;
   font-size: 14px;
   line-height: 1.14;
@@ -57,6 +89,7 @@ li {
 /* Contacts */
 
 .contact {
+  font-weight: 500;
   text-decoration: none;
   font-size: 14px;
   line-height: 1.14;
@@ -71,6 +104,10 @@ li {
 /* MAIN */
 /* Hero section */
 
+.hero-section {
+  background-color: var(--dark-background-color);
+}
+
 .hero-title {
   font-family: inherit;
   font-weight: 900;
@@ -79,12 +116,11 @@ li {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  background-color: #2F303A;
+
   color: var(--text-light-color);
 }
 .hero-btn {
   font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 2;
@@ -94,14 +130,14 @@ li {
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
   color: var(--text-light-color);
-
 }
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--text-light-color);
-  color: var(--accent-color);
+  background-color: var(--accent-hover-color);
   cursor: pointer;
 }
+
 /* Features */
 
 .feature-title {
@@ -112,40 +148,39 @@ li {
   color: var(--title-color);
 }
 .feature-text {
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
 }
 /* Team */
 
-.team-title,
-.occupation-title,
-.features {
+.title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   color: var(--title-color);
 }
-.team-mate {
+.team-mate { 
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.9;
   text-align: center;
   color: var(--title-color);
 }
 .profession {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
   text-align: center;
 }
 /* FOOTER */
 
+.footer {
+  background-color: #2F303A;
+}
 .footer-address {
-  font-weight: 400;
+  font-style: normal;
   font-size: 14px;
   line-height: 1.7;
-  font-style: normal;
   text-decoration: none;
   background-color: #2F303A;
 }
@@ -166,17 +201,19 @@ li {
 /* PORTFOLIO */
 /* Filter */
 
-.page-title,
-.filter,
-.projects {
+.page-title {
   color: var(--title-color);
 }
 .filter-btn {
-  
-  font-family: inherit;
-  background-color: #F5F4FA;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color:var(--button-color);
   color: var(--title-color);
-
 }
 .filter-btn:hover,
 .filter-btn:focus {
@@ -197,9 +234,9 @@ li {
   color: var(--title-color);
 }
 .project-text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
+  color: var(--text-color);
 } 
 
 /* .team {}
