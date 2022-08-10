@@ -94,12 +94,13 @@ li {
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
   color: var(--text-light-color);
-  cursor: pointer;
+
 }
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--text-light-color);
   color: var(--accent-color);
+  cursor: pointer;
 }
 /* Features */
 
@@ -171,15 +172,17 @@ li {
   color: var(--title-color);
 }
 .filter-btn {
-  cursor: pointer;
+  
   font-family: inherit;
   background-color: #F5F4FA;
   color: var(--title-color);
+
 }
 .filter-btn:hover,
 .filter-btn:focus {
   background-color: var(--accent-color);
   color: var(--text-light-color);
+  cursor: pointer;
 }
 /* Projects*/
 
