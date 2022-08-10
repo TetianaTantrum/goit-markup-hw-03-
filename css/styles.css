@@ -165,6 +165,11 @@ li {
 /* PORTFOLIO */
 /* Filter */
 
+.page-title,
+.filter,
+.projects {
+  color: var(--title-color);
+}
 .filter-btn {
   cursor: pointer;
   font-family: inherit;
@@ -178,11 +183,6 @@ li {
 }
 /* Projects*/
 
-.page-title,
-.filter,
-.projects {
-  color: var(--title-color);
-}
 .project-card {
   text-decoration: none;
 }
