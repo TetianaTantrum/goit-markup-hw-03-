@@ -40,7 +40,6 @@ background-color: #2F303A;  треба ставити на сам футер
 }
 body {
   font-family: 'Roboto', 'sans-serif';
-  font-weight: 500;
   letter-spacing: 0.03em;
   background-color: var(--text-light-color);
   color: var(--text-color)
@@ -160,6 +159,24 @@ li {
   text-align: center;
   color: var(--title-color);
 }
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0000);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.team {
+  background-color: #F5F4FA;
+}
+.team-mate-card {
+  background-color: var(--text-light-color);
+}
 .team-mate { 
   font-weight: 500;
   font-size: 16px;
@@ -205,7 +222,7 @@ li {
   color: var(--title-color);
 }
 .filter-btn {
-  font-family: 'Roboto';
+  font-family: inherit;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
