@@ -47,6 +47,18 @@ body {
 li {
   list-style: none;
 }
+.link {
+  text-decoration:none;
+}
+.list {
+  list-style: none;
+}
+img {
+  display:block;
+}
+button {
+  font-family: inherit;
+}
 /* INDEX.HTML */
 /* HEADER */
 /* Logo */
