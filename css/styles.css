@@ -51,6 +51,7 @@ button {
   font-family: inherit;
   border: 1px solid transparent;
 }
+
 /*===================INDEX.HTML ===================*/
 /*=================== HEADER ===================*/
 /*=================== Logo ===================*/
@@ -115,18 +116,19 @@ button {
 }
 
 .hero-title {
+  padding: 0;
+  margin-bottom: 30px;
   font-family: inherit;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
   color: var(--text-light-color);
 }
 .hero-btn {
   padding: 10px 32px;
+  margin-bottom: 294px;
   border-radius: 4px;
   min-width: 216px;
   font-family: "Roboto";
@@ -135,7 +137,7 @@ button {
   line-height: 2;
   display: flex;
   align-items: center;
-  text-align: center;
+
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
   color: var(--text-light-color);
@@ -150,6 +152,7 @@ button {
 /* Features */
 
 .feature-title {
+  margin: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -157,12 +160,15 @@ button {
   color: var(--title-color);
 }
 .feature-text {
+  margin-top: 0;
+  margin-bottom: 118px;
   font-size: 14px;
   line-height: 1.7;
 }
 /* Team */
 
 .title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -184,10 +190,17 @@ button {
 .team {
   background-color: #f5f4fa;
 }
+.occupation-img {
+  margin-bottom: 188px;
+}
 .team-mate-card {
   background-color: var(--text-light-color);
 }
+.team-mate-img {
+  margin-bottom: 30px;
+}
 .team-mate {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.9;
