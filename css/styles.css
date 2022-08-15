@@ -73,6 +73,7 @@ margin-bottom: 0;
 /*===================INDEX.HTML ===================*/
 /*=================== HEADER ===================*/
 /*=================== Logo ===================*/
+
 /* .page-header {
 
 } */
@@ -125,8 +126,8 @@ margin-bottom: 0;
 .contact:focus {
   color: var(--accent-color);
 }
-/* MAIN */
-/* Hero section */
+/*================== MAIN ==================*/
+/*================== Hero section ==================*/
 
 .hero-section {
   
@@ -178,7 +179,7 @@ section {
   cursor: pointer;
 }
 
-/* Features */
+/*================== Features ==================*/
 
 .feature-title {
   margin: 10px 0px;
@@ -194,7 +195,7 @@ section {
   font-size: 14px;
   line-height: 1.7;
 }
-/* Team */
+/*================== Team ==================*/
 
 .title {
   margin-bottom: 50px;
@@ -242,7 +243,7 @@ section {
   line-height: 1.9;
   text-align: center;
 }
-/* FOOTER */
+/*================== FOOTER ==================*/
 
 .footer {
   background-color: #2f303a;
@@ -268,8 +269,8 @@ section {
 .address-contacts:focus {
   color: var(--accent-color);
 }
-/* PORTFOLIO */
-/* Filter */
+/*================== PORTFOLIO ==================*/
+/*================== Filter ==================*/
 
 .page-title {
   color: var(--title-color);
@@ -295,7 +296,7 @@ section {
   color: var(--text-light-color);
   cursor: pointer;
 }
-/* Projects*/
+/*================== Projects ==================*/
 .projects {
   padding-top: 34px;
 }
