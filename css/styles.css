@@ -28,10 +28,14 @@ body {
 section {
   padding-top: 94px;
   padding-bottom: 94px;
+
 }
 .container {
   width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
+  outline: 1px solid tomato
 }
 /* li {
   list-style: none;
@@ -125,11 +129,20 @@ margin-bottom: 0;
 /* Hero section */
 
 .hero-section {
+  
   text-align: center;
   background-color: var(--dark-background-color);
 }
 .centered {
   text-align: center;
+}
+section {
+  padding-top: 94px ;
+  padding-bottom: 94px;
+
+}
+.no-padding {
+  padding-bottom: 0;
 }
 .hero-title {
   padding: 0;
@@ -168,7 +181,7 @@ margin-bottom: 0;
 /* Features */
 
 .feature-title {
-  margin: 10px;
+  margin: 10px 0px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -213,6 +226,7 @@ margin-bottom: 0;
   background-color: var(--text-light-color);
 }
 .team-mate-img {
+  display: block;
   margin-bottom: 30px;
 }
 .team-mate {
@@ -282,7 +296,9 @@ margin-bottom: 0;
   cursor: pointer;
 }
 /* Projects*/
-
+.projects {
+  padding-top: 34px;
+}
 .project-card {
   text-decoration: none;
 }
