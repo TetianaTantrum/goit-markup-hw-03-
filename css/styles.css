@@ -1,76 +1,71 @@
-/* на боді краще не ставити font-weight: 500; , краще прописувати цю властивість
- тільки там, де вона необхідна бачу написання властивості font-style: normal; 
- це зайвий стиль,бо по замовчуванню шрифт має font-style: normal; 
- прердивись у всьому файлі і прибери де є, крім тегу address - тут ця властивість
-  потрібна
-background-color: #2F303A; - цей фон треба ставити на всю сеекцію, а не тільки 
-заголовок у мекеті в прихованих слоях є задизайнений ховер та фокус ефект 
-для кнопки “Заказать услугу”. При ховері/фокусі фон має змінитись на  
-background: #188CE8; 
-https://prnt.sc/bUPtO_BfMM28 
-бачу написання властивості font-weight: 400; це зайвий стиль,бо по замовчуванню 
-шрифт має font-weight: 400; прердивись по всьому файлові
-.team-title, .occupation-title, .features  -- ці назви заголовків можна замінити 
-на прото .title і додавати цей клас до всіх заголовків секцій
-background-color: #2F303A;  треба ставити на сам футер
-на сторінці портфоліо має залишитись лише одна секція ,  і в цій секції першим має стати заголовок 
-<h1>Проекти</h1> , потім список з фільтром, потім список з портфоліо 
-заголовки Фільтр та Приклади робіт - зайві
-<h3 class="project-title">Технокряк</h3> - та інщі назви - це буде теги <h2>
-до кнопок .filter-btn  треба прописати все що пов'язано з шрифтами. розмір, жирність і так далі
-зверни увагу, бажано, щоб всі кольори були записані у css-змінних. 
-Тобі буде на багато зручніше працювати зі змінними  */
-
+html {
+  box-sizing: border-box;
+}
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 :root {
-  --secondary-background-color: #F5F5F5;
+  --secondary-background-color: #f5f5f5;
   --title-color: #212121;
   --text-color: #757575;
-  --accent-color: #2196F3;
-  --accent-hover-color: #188CE8;
+  --accent-color: #2196f3;
+  --accent-hover-color: #188ce8;
   --text-light-color: #fff;
-  --button-color: #F5F4FA;
+  --button-color: #f5f4fa;
   --darkest-color: #000000;
-  --dark-background-color:  #2F303A;;
+  --dark-background-color: #2f303a;
 }
 body {
-  font-family: 'Roboto', 'sans-serif';
+  margin: 0;
+  font-family: "Roboto", "sans-serif";
   letter-spacing: 0.03em;
   background-color: var(--text-light-color);
-  color: var(--text-color)
+  color: var(--text-color);
 }
-li {
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+/* li {
   list-style: none;
-}
+} */
 .link {
-  text-decoration:none;
+  display: inline-block;
+  text-decoration: none;
 }
 .list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 img {
-  display:block;
+  display: block;
 }
 button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
   font-family: inherit;
+  border: 1px solid transparent;
 }
-/* INDEX.HTML */
-/* HEADER */
-/* Logo */
+/*===================INDEX.HTML ===================*/
+/*=================== HEADER ===================*/
+/*=================== Logo ===================*/
+.page-header {
 
-.logo-header, 
+}
+
+.logo-header,
 .logo-footer {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-}    
+}
 .logo-first-part {
   color: var(--accent-color);
 }
@@ -81,7 +76,7 @@ button {
   background-color: var(--dark-background-color);
   color: var(--text-light-color);
 }
-/* Navigation */
+/*=================== Navigation ===================*/
 
 .nav {
   font-weight: 500;
@@ -91,7 +86,7 @@ button {
   color: var(--title-color);
 }
 .current {
-  color: var(--accent-color)
+  color: var(--accent-color);
 }
 .nav:hover,
 .nav:focus {
@@ -105,17 +100,17 @@ button {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--text-color)
+  color: var(--text-color);
 }
 .contact:hover,
 .contact:focus {
   color: var(--accent-color);
-
-} 
+}
 /* MAIN */
 /* Hero section */
 
 .hero-section {
+  text-align: center;
   background-color: var(--dark-background-color);
 }
 
@@ -131,7 +126,10 @@ button {
   color: var(--text-light-color);
 }
 .hero-btn {
-  font-family: 'Roboto';
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 216px;
+  font-family: "Roboto";
   font-weight: 700;
   font-size: 16px;
   line-height: 2;
@@ -184,12 +182,12 @@ button {
   margin: -1px;
 }
 .team {
-  background-color: #F5F4FA;
+  background-color: #f5f4fa;
 }
 .team-mate-card {
   background-color: var(--text-light-color);
 }
-.team-mate { 
+.team-mate {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.9;
@@ -204,14 +202,14 @@ button {
 /* FOOTER */
 
 .footer {
-  background-color: #2F303A;
+  background-color: #2f303a;
 }
 .footer-address {
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
   text-decoration: none;
-  background-color: #2F303A;
+  background-color: #2f303a;
 }
 .address-location {
   text-decoration: none;
@@ -223,7 +221,7 @@ button {
 }
 .address-location:hover,
 .address-location:focus,
-.address-contacts:hover, 
+.address-contacts:hover,
 .address-contacts:focus {
   color: var(--accent-color);
 }
@@ -234,6 +232,10 @@ button {
   color: var(--title-color);
 }
 .filter-btn {
+  padding: 6px 22px;
+  border-radius: 4px;
+  border-color: #f5f4fa;
+  min-width: 73px;
   font-family: inherit;
   font-style: normal;
   font-weight: 500;
@@ -241,7 +243,7 @@ button {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  background-color:var(--button-color);
+  background-color: var(--button-color);
   color: var(--title-color);
 }
 .filter-btn:hover,
@@ -266,7 +268,7 @@ button {
   font-size: 16px;
   line-height: 1.88;
   color: var(--text-color);
-} 
+}
 
 /* .team {}
 .nav:active {}
