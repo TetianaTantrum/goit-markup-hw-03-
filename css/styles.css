@@ -25,6 +25,10 @@ body {
   background-color: var(--text-light-color);
   color: var(--text-color);
 }
+section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -51,13 +55,23 @@ button {
   font-family: inherit;
   border: 1px solid transparent;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+margin-top: 0;
+margin-bottom: 0;
+}
 
 /*===================INDEX.HTML ===================*/
 /*=================== HEADER ===================*/
 /*=================== Logo ===================*/
-.page-header {
+/* .page-header {
 
-}
+} */
 
 .logo-header,
 .logo-footer {
@@ -93,7 +107,7 @@ button {
 .nav:focus {
   color: var(--accent-color);
 }
-/* Contacts */
+/*================== Contacts =================*/
 
 .contact {
   font-weight: 500;
@@ -114,7 +128,9 @@ button {
   text-align: center;
   background-color: var(--dark-background-color);
 }
-
+.centered {
+  text-align: center;
+}
 .hero-title {
   padding: 0;
   margin-bottom: 30px;
@@ -128,7 +144,7 @@ button {
 }
 .hero-btn {
   padding: 10px 32px;
-  margin-bottom: 294px;
+  margin-bottom: 200px;
   border-radius: 4px;
   min-width: 216px;
   font-family: "Roboto";
@@ -161,7 +177,7 @@ button {
 }
 .feature-text {
   margin-top: 0;
-  margin-bottom: 118px;
+  margin-bottom: 0px;
   font-size: 14px;
   line-height: 1.7;
 }
@@ -187,11 +203,11 @@ button {
   clip-path: inset(50%);
   margin: -1px;
 }
+/* .occupation-img {
+  margin-bottom: 94px;
+} */
 .team {
   background-color: #f5f4fa;
-}
-.occupation-img {
-  margin-bottom: 188px;
 }
 .team-mate-card {
   background-color: var(--text-light-color);
