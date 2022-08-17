@@ -28,12 +28,15 @@ body {
 section {
   padding-top: 94px;
   padding-bottom: 94px;
-
+}
+footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .container {
   width: 1200px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
   outline: 1px solid tomato
 }
@@ -52,12 +55,16 @@ section {
 img {
   display: block;
 }
+address {
+  font-style: normal;
+}
 button {
   display: inline-block;
   text-decoration: none;
   text-align: center;
   font-family: inherit;
   border: 1px solid transparent;
+  cursor: pointer;
 }
 h1,
 h2,
@@ -65,12 +72,20 @@ h3,
 h4,
 h5,
 h6,
-p 
-ul {
+p {
 margin-top: 0;
 margin-bottom: 0;
 }
-
+ul ol {
+margin-top: 0;
+margin-bottom: 0;
+padding-left: 0;
+padding-right: 0;
+}
+section {
+  padding-top: 94px ;
+  padding-bottom: 94px;
+}
 /*===================INDEX.HTML ===================*/
 /*=================== HEADER ===================*/
 /*=================== Logo ===================*/
@@ -78,7 +93,11 @@ margin-bottom: 0;
 /* .page-header {
 
 } */
-
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .logo-header,
 .logo-footer {
   font-family: "Raleway";
@@ -91,9 +110,15 @@ margin-bottom: 0;
   color: var(--accent-color);
 }
 .logo-header {
-  color: var(--darkest-color);
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  /* outline: 1px solid #2196f3;  */
+  margin-right: 93px; 
+  color: var(--darkest-color); 
 }
 .logo-footer {
+  margin-bottom: 20px;
   background-color: var(--dark-background-color);
   color: var(--text-light-color);
 }
@@ -102,18 +127,26 @@ margin-bottom: 0;
 .navigation {
   display: flex;
 }
-.navigation .item {
-  margin-right: 50px;
+.navigation .item + .item {
+  margin-left: 50px;
 }
-.navigation .item:last-child {
-  margin-right: 0;
-}
+/* .nav {
+} */
 .nav {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* outline: 1px solid #2196f3; */
+  display: block;
+
   font-weight: 500;
   text-decoration: none;
   font-size: 14px;
   line-height: 1.14;
   color: var(--title-color);
+
+}
+.navigation .link {
+  
 }
 .current {
   color: var(--accent-color);
@@ -123,8 +156,15 @@ margin-bottom: 0;
   color: var(--accent-color);
 }
 /*================== Contacts =================*/
-
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
 .contact {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* outline: 1px solid #2196f3; */
+
   font-weight: 500;
   text-decoration: none;
   font-size: 14px;
@@ -136,22 +176,24 @@ margin-bottom: 0;
 .contact:focus {
   color: var(--accent-color);
 }
+.contact-item {
+
+}
+
+.contact-item + .contact-item {
+  margin-left : 50px;
+}
 /*================== MAIN ==================*/
 /*================== Hero section ==================*/
 
 .hero-section {
-  
   text-align: center;
   background-color: var(--dark-background-color);
 }
 .centered {
   text-align: center;
 }
-section {
-  padding-top: 94px ;
-  padding-bottom: 94px;
 
-}
 .no-padding {
   padding-bottom: 0;
 }
@@ -167,6 +209,8 @@ section {
   color: var(--text-light-color);
 }
 .hero-btn {
+  align-items: center;
+
   padding: 10px 32px;
   margin-bottom: 200px;
   border-radius: 4px;
@@ -175,8 +219,7 @@ section {
   font-weight: 700;
   font-size: 16px;
   line-height: 2;
-  display: flex;
-  align-items: center;
+ 
 
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
@@ -190,6 +233,17 @@ section {
 }
 
 /*================== Features ==================*/
+.features {
+  display: flex;
+  flex-wrap: wrap;
+}
+.features .feature-item + .feature-item {
+  margin-left: 30px;
+}
+
+.feature-item {
+  width: 270px;
+}
 
 .feature-title {
   margin: 10px 0px;
@@ -227,14 +281,33 @@ section {
   clip-path: inset(50%);
   margin: -1px;
 }
+/* ================== Occupation ================= */
+.occupation-list {
+  display:flex;
+}
+
+.occupation .occupation-item + .occupation-item {
+  margin-left: 30px;
+
+}
+.occupation-img {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 /* .occupation-img {
   margin-bottom: 94px;
 } */
 .team {
   background-color: #f5f4fa;
 }
+.team-list {
+  display: flex;
+}
 .team-mate-card {
   background-color: var(--text-light-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.team-list .team-mate-card + .team-mate-card {
+  margin-left: 30px;
 }
 .team-mate-img {
   display: block;
@@ -265,6 +338,9 @@ section {
   text-decoration: none;
   background-color: #2f303a;
 }
+.footer .footer-item + .footer-item {
+margin-top: 9px;
+}
 .address-location {
   text-decoration: none;
   color: var(--text-light-color);
@@ -285,7 +361,15 @@ section {
 .page-title {
   color: var(--title-color);
 }
-.filter-btn {
+.filter-list {
+  display: flex;
+  justify-content: center;
+    padding-bottom: 50px;
+}
+.filter-list .filter-btn + .filter-btn {
+  margin-left: 8px;
+}
+.filter-btn { 
   padding: 6px 22px;
   border-radius: 4px;
   border-color: #f5f4fa;
@@ -299,21 +383,47 @@ section {
   letter-spacing: 0.03em;
   background-color: var(--button-color);
   color: var(--title-color);
+
 }
 .filter-btn:hover,
 .filter-btn:focus {
+
+  background: #2196F3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
   background-color: var(--accent-color);
   color: var(--text-light-color);
   cursor: pointer;
 }
 /*================== Projects ==================*/
 .projects {
-  padding-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  outline: 1px solid tomato;
+}
+.projects .project-card + .project-card {
+  margin-left: 30px;
 }
 .project-card {
+  display: block;
+  margin-bottom: 30px;
   text-decoration: none;
+  padding-bottom: 20px;
+  border: 1px solid #EEEEEE;
 }
+
+.project-card:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.project-img {
+  margin-bottom: 20px;
+}
+
 .project-title {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -325,6 +435,7 @@ section {
   line-height: 1.88;
   color: var(--text-color);
 }
+
 
 /* .team {}
 .nav:active {}
