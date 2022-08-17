@@ -38,7 +38,7 @@ footer {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid tomato
+  /* outline: 1px solid tomato */
 }
 /* li {
   list-style: none;
@@ -366,7 +366,7 @@ margin-top: 9px;
   justify-content: center;
     padding-bottom: 50px;
 }
-.filter-list .filter-btn + .filter-btn {
+.filter-list .filter-item + .filter-item {
   margin-left: 8px;
 }
 .filter-btn { 
@@ -400,25 +400,26 @@ margin-top: 9px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
 }
 .projects .project-card + .project-card {
   margin-left: 30px;
 }
-.project-card {
+.project-item {
   display: block;
   margin-bottom: 30px;
-  text-decoration: none;
-  padding-bottom: 20px;
-  border: 1px solid #EEEEEE;
+  border: 1px solid #EEEEEE
+  /* border: 1px solid blue */
 }
-
-.project-card:nth-last-child(-n + 3) {
+.project-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-
-.project-img {
-  margin-bottom: 20px;
+.project-card {
+  padding-bottom: 20px;
+  text-decoration: none;
+}
+.project-notes {
+  padding: 20px 24px;
 }
 
 .project-title {
