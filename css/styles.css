@@ -40,9 +40,6 @@ footer {
   margin: 0 auto;
   /* outline: 1px solid tomato */
 }
-/* li {
-  list-style: none;
-} */
 .link {
   display: inline-block;
   text-decoration: none;
@@ -90,9 +87,9 @@ section {
 /*=================== HEADER ===================*/
 /*=================== Logo ===================*/
 
-/* .page-header {
-
-} */
+.page-header {
+border-bottom: 1px solid #ECECEC;
+}
 .header-nav {
   display: flex;
   align-items: center;
@@ -111,10 +108,10 @@ section {
 }
 .logo-header {
   display: block;
+  margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 25px;
   /* outline: 1px solid #2196f3;  */
-  margin-right: 93px;
   color: var(--darkest-color);
 }
 .logo-footer {
@@ -123,13 +120,17 @@ section {
   color: var(--text-light-color);
 }
 /*=================== Navigation ===================*/
-
 .navigation {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.navigation .item + .item {
-  margin-left: 50px;
+
+.menu {
+  display: flex;
+  gap: 50px;
 }
+
 /* .nav {
 } */
 .nav {
@@ -144,7 +145,7 @@ section {
   line-height: 1.14;
   color: var(--title-color);
 }
-/* .navigation .link {
+/* .menu .link {
 } */
 .current {
   color: var(--accent-color);
