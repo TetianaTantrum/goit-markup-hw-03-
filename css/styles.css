@@ -291,9 +291,9 @@ flex-basis: calc((100%-50px)/2);
 .occupation-item {
 flex-basis: calc((100% - 2*30px)/3);
 }
-.occupation-img {
+/* .occupation-img {
   
-}
+} */
 /* .occupation-img {
   margin-bottom: 94px;
 } */
@@ -344,10 +344,10 @@ padding-bottom: 30px;
   text-decoration: none;
   background-color: #2f303a;
 }
-.address-list {
+/* .address-list {
 }  
 .address-item {
-}
+} */
 
 .address-location {
   text-decoration: none;
